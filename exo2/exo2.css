@@ -1,0 +1,44 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#carre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carre{
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+}
+
+#carre1{
+    background-color: rgb(73, 114, 168);
+}
+
+#carre2{
+    background-color: rgb(164, 204, 89);
+}
+
+#carre3{
+    background-color: rgb(143, 50, 50);
+}
+
+#carre4{
+    background-color: rgb(78, 185, 92);
+}
+
+#carreSpe{
+    background-color: rgb(129, 129, 129);
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
