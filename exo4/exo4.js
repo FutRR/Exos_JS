@@ -11,61 +11,58 @@ const fbIcon = document.querySelector(".fa-facebook");
 const twIcon = document.querySelector(".fa-twitter");
 const igIcon = document.querySelector(".fa-instagram");
 
+cards.forEach((card) => {
+  card.addEventListener("click", function () {
+    card.classList.toggle("change");
+    const cardBg = window.getComputedStyle(card);
+    if (boxBg.getPropertyValue("background-color") === "rgb(150, 150, 150)") {
+      box.style.setProperty(
+        "background-color",
+        cardBg.getPropertyValue("background-color"),
+        "important"
+      );
+    } else {
+      box.style.setProperty(
+        "background-color",
+        "rgb(150, 150, 150)",
+        "important"
+      );
+    }
+  });
+});
+
 fb.addEventListener("click", function () {
   fbIcon.classList.toggle("rotate");
-  fb.classList.toggle("change");
-  const fbBg = window.getComputedStyle(fb);
-  if (boxBg.getPropertyValue("background-color") === "rgb(150, 150, 150)") {
-    box.style.setProperty(
-      "background-color",
-      fbBg.getPropertyValue("background-color"),
-      "important"
-    );
+  const fbText = document.querySelector("#fbTxt");
+  const fbTextCSS = window.getComputedStyle(fbText);
+  if (fbTextCSS.getPropertyValue("opacity") === "0") {
+    fbText.style.setProperty("transition", "500ms ease", "important");
+    fbText.style.setProperty("opacity", "1", "important");
   } else {
-    box.style.setProperty(
-      "background-color",
-      "rgb(150, 150, 150)",
-      "important"
-    );
+    fbText.style.setProperty("opacity", "0", "important");
   }
-  fbText = document.querySelector("p");
-  fbText.style.display = "inline-block";
 });
 
 tw.addEventListener("click", function () {
   twIcon.classList.toggle("rotate");
-  tw.classList.toggle("change");
-  const twBg = window.getComputedStyle(tw);
-  if (boxBg.getPropertyValue("background-color") === "rgb(150, 150, 150)") {
-    box.style.setProperty(
-      "background-color",
-      twBg.getPropertyValue("background-color"),
-      "important"
-    );
+  const twText = document.querySelector("#twTxt");
+  const twTextCSS = window.getComputedStyle(twText);
+  if (twTextCSS.getPropertyValue("opacity") === "0") {
+    twText.style.setProperty("transition", "500ms ease", "important");
+    twText.style.setProperty("opacity", "1", "important");
   } else {
-    box.style.setProperty(
-      "background-color",
-      "rgb(150, 150, 150)",
-      "important"
-    );
+    twText.style.setProperty("opacity", "0", "important");
   }
 });
 
 ig.addEventListener("click", function () {
   igIcon.classList.toggle("rotate");
-  ig.classList.toggle("change");
-  const igBg = window.getComputedStyle(ig);
-  if (boxBg.getPropertyValue("background-color") === "rgb(150, 150, 150)") {
-    box.style.setProperty(
-      "background-color",
-      igBg.getPropertyValue("background-color"),
-      "important"
-    );
+  const igText = document.querySelector("#igTxt");
+  const igTextCSS = window.getComputedStyle(igText);
+  if (igTextCSS.getPropertyValue("opacity") === "0") {
+    igText.style.setProperty("transition", "500ms ease", "important");
+    igText.style.setProperty("opacity", "1", "important");
   } else {
-    box.style.setProperty(
-      "background-color",
-      "rgb(150, 150, 150)",
-      "important"
-    );
+    igText.style.setProperty("opacity", "0", "important");
   }
 });

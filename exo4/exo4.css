@@ -42,9 +42,8 @@ i{
 }
 
 p{
-    display: none;
+    opacity: 0;
     color: #fff;
-    transition: 1000ms ease;
 }
 
 #fb{
@@ -67,8 +66,4 @@ p{
 
 .rotate{
     transform: translateY(-30px) rotate(360deg);
-}
-
-.vis{
-    display: inline-block;
 }
