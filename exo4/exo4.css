@@ -34,7 +34,8 @@ body{
     width: 200px;
     height: 200px;
     margin: 0 50px;
-    transition: 500ms ease;
+    filter: brightness(1) !important;
+    transition: 1000ms ease;
 }
 
 i{
@@ -52,23 +53,32 @@ p{
 }
 
 #fb{
-    background-color: rgb(74, 74, 184);
+    background-color: rgb(66, 103, 178);
 }
 
 #tw{
-    background-color: rgb(79, 154, 224);
+    background-color: rgb(29, 161, 242);
 }
 
 #ig{
-    background-color: rgb(189, 59, 87);
+    background-color: rgb(225, 48, 108);
 }
 
 
 .change{
-    box-shadow: 0px 5px 15px black;
-    border-radius:20px;
+    box-shadow: 0px 5px 5px black;
+    border-radius: 20px;
+    filter: brightness(1) !important;
 }
 
 .rotate{
     transform: translateY(-15px) rotate(360deg);
+}
+
+.boxBrightness{
+    filter : brightness(1.2);
+}
+
+.cardsBrightness{
+    filter: brightness(1);
 }
