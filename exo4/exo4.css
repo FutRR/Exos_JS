@@ -17,6 +17,7 @@ body{
     align-items: center;
     background-color: rgb(150, 150, 150);
     padding: 50px;
+    height: 100vh;
 }
 
 .cardWrapper{
@@ -27,6 +28,7 @@ body{
 
 .card{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 200px;
@@ -34,9 +36,15 @@ body{
     margin: 0 50px;
 }
 
-.card i{
+i{
     transition: 1000ms ease;
     font-size: 70px;
+}
+
+p{
+    display: none;
+    color: #fff;
+    transition: 1000ms ease;
 }
 
 #fb{
@@ -58,6 +66,9 @@ body{
 }
 
 .rotate{
-    transform: translateY(500px);
-    transform: rotate(360deg);
+    transform: translateY(-30px) rotate(360deg);
+}
+
+.vis{
+    display: inline-block;
 }
