@@ -28,7 +28,6 @@
 
 .change{
     background-color: rgb(128, 67, 67);
-    transform: scale(10%);
-    transform: rotate(360deg);
+    transform: rotate(360deg)  scale(90%);
 
 }

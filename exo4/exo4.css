@@ -34,20 +34,25 @@ body{
     width: 200px;
     height: 200px;
     margin: 0 50px;
+    transition: 500ms ease;
 }
 
 i{
     transition: 1000ms ease;
     font-size: 70px;
+    position: relative;
+    top: 20px;
 }
 
 p{
     opacity: 0;
     color: #fff;
+    position: relative;
+    top: 20px;
 }
 
 #fb{
-    background-color: rgb(44, 44, 133);
+    background-color: rgb(74, 74, 184);
 }
 
 #tw{
@@ -65,5 +70,5 @@ p{
 }
 
 .rotate{
-    transform: translateY(-30px) rotate(360deg);
+    transform: translateY(-15px) rotate(360deg);
 }

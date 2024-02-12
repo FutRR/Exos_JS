@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(223, 223, 223);
+}
+
+.wrapper{
+    padding: 250px;
+}
+
+#quotes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.quote{
+    border: 1px solid black;
+    border-radius: 15px;
+    width: fit-content;
+    min-width: 400px;
+    min-height: 100px;
+    background-color: #fff;
+    margin: 10px 0;
+}
+
+#quote1{
+}
+#quote2{
+}
+
+#quote3{
+}
+
+#quote4{
+}
+
+#quote5{
+}

@@ -11,16 +11,33 @@ const fbIcon = document.querySelector(".fa-facebook");
 const twIcon = document.querySelector(".fa-twitter");
 const igIcon = document.querySelector(".fa-instagram");
 
+var background = {
+  "rgb(74, 74, 184)": "rgb(54, 54, 160)",
+  "rgb(79, 154, 224)": "rgb(42, 136, 224)",
+  "rgb(189, 59, 87)": "rgb(194, 36, 70)",
+};
+
 cards.forEach((card) => {
   card.addEventListener("click", function () {
     card.classList.toggle("change");
     const cardBg = window.getComputedStyle(card);
+    var background = {
+      "rgb(74, 74, 184)": "rgb(54, 54, 160)",
+      "rgb(79, 154, 224)": "rgb(42, 136, 224)",
+      "rgb(189, 59, 87)": "rgb(194, 36, 70)",
+    };
     if (boxBg.getPropertyValue("background-color") === "rgb(150, 150, 150)") {
       box.style.setProperty(
         "background-color",
         cardBg.getPropertyValue("background-color"),
         "important"
       );
+      for (var oldBg in newBg) {
+        cardBg.setProperty("background-color", +newBg, "important");
+        console.log(newBg);
+      }
+
+      cardBg.style.setProperty("background-color");
     } else {
       box.style.setProperty(
         "background-color",

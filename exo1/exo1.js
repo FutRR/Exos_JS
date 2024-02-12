@@ -1,8 +1,9 @@
 const carre = document.querySelector(".carre");
-const carreCSS = window.getComputedStyle(carre);
+const carreCSS = window.getComputedStyle(carre); // Setting a variable to get CSS properties
 
 carre.addEventListener("click", function () {
   alert(
+    // Displaying CSS properties in an alert
     "Class : " +
       carre.className +
       "\n - Background color : " +
