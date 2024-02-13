@@ -20,16 +20,29 @@ Object.keys(quotes).forEach(function (writer) {
   auteur.classList.add("auteur");
 
   quotes[writer].forEach(function (quoteObj) {
-    const authorName = quoteObj.name;
-    const quote = quoteObj.quote;
-    citation.innerHTML = '"' + quote + '"';
-    auteur.innerHTML = authorName;
-  });
+    const quoteKey = `${writer}_${quoteObj.name}_${quoteObj.quote}`;
+    citation.innerHTML = '"' + quoteObj.quote + '"';
+    auteur.innerHTML = quoteObj.name;
 
-  // Favorites system
+    // Favorites system
 
-  fav.addEventListener("click", function () {
-    fav.classList.toggle("fa-solid");
-    fav.classList.add("fa-heart");
+    document.addEventListener("DOMContentLoaded", function () {
+      // Retrieve the current state from localStorage
+      const isFav = localStorage.getItem(quoteKey) === "true";
+
+      // Set initial class based on localStorage state
+      if (isFav) {
+        fav.classList.add("fa-solid");
+      }
+
+      // Add click event listener to toggle classes and update localStorage
+      fav.addEventListener("click", function () {
+        // Toggle the classes
+        fav.classList.toggle("fa-solid");
+
+        // Update the state in localStorage
+        localStorage.setItem(quoteKey, fav.classList.contains("fa-solid"));
+      });
+    });
   });
 });
