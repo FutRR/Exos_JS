@@ -13,12 +13,14 @@ Object.keys(quotes).forEach(function (writer) {
   citationWrap.appendChild(fav);
   citationWrap.appendChild(auteur);
 
+  // Adding classes to html elements
   citationWrap.classList.add("quote");
   citation.classList.add("citation");
   fav.classList.add("fa-regular");
   fav.classList.add("fa-heart");
   auteur.classList.add("auteur");
 
+  // Displaying the quote and author for each container + giving it a key to be stored in localStorage
   quotes[writer].forEach(function (quoteObj) {
     const quoteKey = `${writer}_${quoteObj.name}_${quoteObj.quote}`;
     citation.innerHTML = '"' + quoteObj.quote + '"';
@@ -27,20 +29,20 @@ Object.keys(quotes).forEach(function (writer) {
     // Favorites system
 
     document.addEventListener("DOMContentLoaded", function () {
-      // Retrieve the current state from localStorage
+      // Retrieving the current state from localStorage
       const isFav = localStorage.getItem(quoteKey) === "true";
 
-      // Set initial class based on localStorage state
+      // Setting initial class based on localStorage state
       if (isFav) {
         fav.classList.add("fa-solid");
       }
 
-      // Add click event listener to toggle classes and update localStorage
+      // Adding click event listener to toggle classes and update localStorage
       fav.addEventListener("click", function () {
         // Toggle the classes
         fav.classList.toggle("fa-solid");
 
-        // Update the state in localStorage
+        // Updating the state in localStorage
         localStorage.setItem(quoteKey, fav.classList.contains("fa-solid"));
       });
     });
