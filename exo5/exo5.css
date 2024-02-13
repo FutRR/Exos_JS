@@ -1,15 +1,18 @@
-body{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: rgb(223, 223, 223);
+}
+
+body{
+    background-color: #ddd;
 }
 
 .wrapper{
-    padding: 250px;
+    padding: 200px;
 }
 
-#quotes{
+#quotes-wrap{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -18,25 +21,27 @@ body{
 }
 
 .quote{
-    border: 1px solid black;
     border-radius: 15px;
-    width: fit-content;
+    width: max-content;
     min-width: 400px;
-    min-height: 100px;
+    min-height: 120px;
     background-color: #fff;
-    margin: 10px 0;
+    margin: 20px ;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 10px 10px 0px;
 }
 
-#quote1{
-}
-#quote2{
-}
-
-#quote3{
+.citation{
+    align-self: center;
+    font-size: 25px;
+    margin-bottom: 15px;
 }
 
-#quote4{
-}
-
-#quote5{
+.auteur{
+    align-self: flex-end;
+    font-size: 20px;
 }
