@@ -28,6 +28,7 @@ body{
     background-color: #fff;
     margin: 20px ;
     padding: 10px;
+    padding-left: 40px;
 
     display: flex;
     flex-direction: column;
@@ -39,9 +40,16 @@ body{
     align-self: center;
     font-size: 25px;
     margin-bottom: 15px;
+    margin-right: 40px;
+}
+
+.fa-heart{
+    align-self: flex-end;
+    font-size: 20px;
 }
 
 .auteur{
     align-self: flex-end;
     font-size: 20px;
+    margin-right: 40px;
 }
